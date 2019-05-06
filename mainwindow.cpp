@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     setWindowTitle(tr("Main Window"));
 
-    open_action = new QAction(QIcon(""),tr("&Open..."),this); //新建action（图标，名字，this指针）
+    open_action = new QAction(QIcon(":/images/doc-open"),tr("&Open..."),this); //新建action（图标，名字，this指针）
     open_action->setShortcut(QKeySequence::Open); //设置快捷点（快捷点为open）
     open_action->setStatusTip(tr("Open an existing file")); //设置status bar（状态栏）显示的文字
     connect(open_action,&QAction::triggered,this,&MainWindow::open); //信号槽（点击action -> MainWindow里的open函数）
